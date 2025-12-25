@@ -17,16 +17,26 @@ st.set_page_config(page_title="NAMA Compliance Agent", layout="wide")
 # --- HIDE STREAMLIT BRANDING & TOOLBARS ---
 hide_st_style = """
 <style>
-    /* Hides the top right hamburger menu & header */
+    /* 1. Hide the standard Streamlit 'Hamburger' menu and header */
     #MainMenu {visibility: hidden;}
     header {visibility: hidden;}
     
-    /* Hides the footer and the specific 'Manage app' bottom bar */
+    /* 2. Hide the footer (Made with Streamlit) */
     footer {visibility: hidden;}
-    .stApp > header {display: none;}
     
-    /* Specific selector for the 'Manage app' toolbar in some versions */
-    div[data-testid="stToolbar"] {visibility: hidden; height: 0%; position: fixed;}
+    /* 3. Hide the specific 'Deploy' and 'Manage' buttons */
+    .stDeployButton {display:none;}
+    
+    /* 4. Hide the top decoration bar (colored line) if visible */
+    [data-testid="stDecoration"] {display:none;}
+    
+    /* 5. Aggressively hide the toolbar container */
+    [data-testid="stToolbar"] {visibility: hidden !important; display: none !important;}
+    
+    /* 6. Remove top padding that might remain after hiding the header */
+    .block-container {
+        padding-top: 1rem !important; 
+    }
 </style>
 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
