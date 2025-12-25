@@ -14,15 +14,6 @@ from mistralai import Mistral
 # --- 1. CONFIGURATION & SETUP ---
 load_dotenv()
 st.set_page_config(page_title="NAMA Compliance Agent", layout="wide")
-# --- HIDE STREAMLIT STYLE ---
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
 # API Configuration
