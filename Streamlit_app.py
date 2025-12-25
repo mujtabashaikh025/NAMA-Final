@@ -9,7 +9,7 @@ with col1:
     st.image("images/nama-logo.png")
 
 with col2:
-    st.image("images/velyana-logo.png)
+    st.image("images/velyana-logo.png")
 
 pages = {
     "Services": [
