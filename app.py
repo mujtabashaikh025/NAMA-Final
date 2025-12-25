@@ -16,11 +16,11 @@ load_dotenv()
 st.set_page_config(page_title="NAMA Compliance Agent", layout="wide")
 
 # API Configuration
-api_key = st.secrets["auth_key"]
+api_key = st.secrets["gemini_auth_key"]
 genai.configure(api_key=api_key)
 
 # Mistral Configuration
-MISTRAL_API_KEY = "uyulwup4Udci1Vn74GE9TjNgJ4jNYQ6R" 
+MISTRAL_API_KEY = st.secrets["mistral_auth_key"]
 mistral_client = Mistral(api_key=MISTRAL_API_KEY)
 
 REQUIRED_DOCS = [
