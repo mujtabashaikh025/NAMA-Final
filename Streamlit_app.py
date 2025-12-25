@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 #updated
 
-img1 = Image.open("nama-logo.png")
+img1 = Image.open("images/nama-logo.png")
 s1 = (250, 200) 
 img1_resized = img1.resize(s1)
 
@@ -12,7 +12,7 @@ with col1:
     st.image(img1_resized)
 
 with col2:
-    st.image("velyana-new.png")
+    st.image("images/velyana-new.png")
 
 pages = {
     "Services": [
