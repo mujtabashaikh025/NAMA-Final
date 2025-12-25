@@ -5,7 +5,7 @@ import streamlit as st
 col1,col2 = st.columns(2)
 with st.col1:
     st.image("images/nama-logo.png")
-with st.col1:
+with st.col2:
     st.image("images/velyana-logo.png")
 
 pages = {
