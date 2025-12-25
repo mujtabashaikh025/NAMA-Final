@@ -21,7 +21,7 @@ api_key = st.secrets["gemini_auth_key"]
 genai.configure(api_key=api_key)
 
 # Mistral Configuration
-MISTRAL_API_KEY = st.secrets["mistral_auth_key"]
+MISTRAL_API_KEY = st.secrets["ocr_auth_key"]
 mistral_client = Mistral(api_key=MISTRAL_API_KEY)
 
 REQUIRED_DOCS = [
