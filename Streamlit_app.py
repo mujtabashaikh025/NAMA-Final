@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+#updated
 
 img1 = Image.open("nama-logo.png")
 s1 = (250, 200) 
