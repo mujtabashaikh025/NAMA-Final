@@ -16,7 +16,7 @@ load_dotenv()
 st.set_page_config(page_title="NAMA Compliance Agent", layout="wide")
 
 # API Configuration
-api_key = "AIzaSyDpvIYZSQhsRNwqZ0ngXf78T9iv21YFaEk" 
+api_key = st.secrets["auth_key"]
 genai.configure(api_key=api_key)
 
 # Mistral Configuration
