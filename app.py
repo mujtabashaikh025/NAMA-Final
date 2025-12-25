@@ -14,15 +14,23 @@ from mistralai import Mistral
 # --- 1. CONFIGURATION & SETUP ---
 load_dotenv()
 st.set_page_config(page_title="NAMA Compliance Agent", layout="wide")
-# --- HIDE STREAMLIT STYLE ---
+# --- HIDE STREAMLIT BRANDING & TOOLBARS ---
 hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
+<style>
+    /* Hides the top right hamburger menu & header */
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    
+    /* Hides the footer and the specific 'Manage app' bottom bar */
+    footer {visibility: hidden;}
+    .stApp > header {display: none;}
+    
+    /* Specific selector for the 'Manage app' toolbar in some versions */
+    div[data-testid="stToolbar"] {visibility: hidden; height: 0%; position: fixed;}
+</style>
+"""
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
 
 # API Configuration
 api_key = st.secrets["gemini_auth_key"]
