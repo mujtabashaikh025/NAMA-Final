@@ -14,31 +14,14 @@ from mistralai import Mistral
 # --- 1. CONFIGURATION & SETUP ---
 load_dotenv()
 st.set_page_config(page_title="NAMA Compliance Agent", layout="wide")
-# --- HIDE STREAMLIT BRANDING & TOOLBARS ---
+# --- HIDE STREAMLIT STYLE ---
 hide_st_style = """
-<style>
-    /* 1. Hide the standard Streamlit 'Hamburger' menu and header */
-    #MainMenu {visibility: hidden;}
-    header {visibility: hidden;}
-    
-    /* 2. Hide the footer (Made with Streamlit) */
-    footer {visibility: hidden;}
-    
-    /* 3. Hide the specific 'Deploy' and 'Manage' buttons */
-    .stDeployButton {display:none;}
-    
-    /* 4. Hide the top decoration bar (colored line) if visible */
-    [data-testid="stDecoration"] {display:none;}
-    
-    /* 5. Aggressively hide the toolbar container */
-    [data-testid="stToolbar"] {visibility: hidden !important; display: none !important;}
-    
-    /* 6. Remove top padding that might remain after hiding the header */
-    .block-container {
-        padding-top: 1rem !important; 
-    }
-</style>
-"""
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
@@ -195,7 +178,7 @@ def verify_wras_online(wras_id):
 # --- 5. UI & EXECUTION LOGIC ---
 st.title("NAMA Compliance AI Audit")
 
-uploaded_files = st.file_uploader("Upload PDF documents", type=["pdf"], accept_multiple_files=True)
+uploaded_files = st.file_uploader("Upload Documents for Analysis...", type=["pdf"], accept_multiple_files=True)
 
 if st.button("Run Audit", type="primary"):
     if uploaded_files:
